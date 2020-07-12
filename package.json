@@ -25,7 +25,15 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeoness9837/acbay"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoyeoness9837/acbay/issues"
+  },
+  "homepage": "https://github.com/hoyeoness9837/acbay#readme"
 }

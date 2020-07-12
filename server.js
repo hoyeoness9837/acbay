@@ -3,7 +3,6 @@ const express = require('express');
 const { join } = require('path');
 const http = require('http');
 const passport = require('passport');
-// const cors = require('cors');
 const { Strategy } = require('passport-local');
 const { Strategy: JWTStrategy, ExtractJwt } = require('passport-jwt');
 
@@ -11,7 +10,6 @@ const app = express();
 const { User } = require('./models');
 const server = http.createServer(app);
 
-// app.use('/uploads', express.static('uploads'));
 app.use(express.static(join(__dirname, 'client', 'build')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -36,7 +34,6 @@ passport.use(
   )
 );
 
-// app.use(cors());
 app.use(require('./routes'));
 app.get('*', (req, res) => {
   res.sendFile(join(__dirname, 'client', 'build', 'index.html'));
